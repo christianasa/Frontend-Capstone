@@ -1,0 +1,80 @@
+.home {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.hero {
+  background: #e05c2a;
+  color: white;
+  border-radius: 12px;
+  padding: 48px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.hero h1 { font-size: 36px; margin-bottom: 10px; }
+.hero p { font-size: 18px; margin-bottom: 24px; opacity: 0.9; }
+
+.countdown {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 16px 32px;
+}
+
+.countdown-number { font-size: 52px; font-weight: bold; line-height: 1; }
+.countdown-label { font-size: 14px; opacity: 0.9; margin-top: 4px; }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: white;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.stat-card h2 { font-size: 36px; color: #e05c2a; margin-bottom: 6px; }
+.stat-card p { color: #666; font-size: 14px; }
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: #e05c2a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary:hover { background: #c94e22; }
+
+.btn-secondary {
+  background: white;
+  color: #e05c2a;
+  border: 2px solid #e05c2a;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-secondary:hover { background: #fff5f2; }
