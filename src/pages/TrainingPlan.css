@@ -1,0 +1,64 @@
+.training-plan {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.training-plan h1 { font-size: 28px; margin-bottom: 24px; color: #1a1a1a; }
+
+.week-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.week-btn {
+  padding: 8px 14px;
+  border: 1.5px solid #e05c2a;
+  border-radius: 6px;
+  background: white;
+  color: #e05c2a;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.week-btn.active { background: #e05c2a; color: white; }
+.week-btn:hover { background: #fff5f2; }
+.week-btn.active:hover { background: #c94e22; }
+
+.schedule h2 { font-size: 20px; margin-bottom: 16px; color: #333; }
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.schedule-table th {
+  background: #e05c2a;
+  color: white;
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.schedule-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #333;
+}
+
+.completed-row td { text-decoration: line-through; color: #aaa; }
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #e05c2a;
+}
