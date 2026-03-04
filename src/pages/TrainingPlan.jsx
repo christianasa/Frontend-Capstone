@@ -2,12 +2,18 @@ import React, { useState } from 'react';
 import './TrainingPlan.css';
 
 const trainingPlan = [
-  { week: 1, runs: [{ day: 'Monday', type: 'Easy Run', distance: '3 mi' }, { day: 'Wednesday', type: 'Easy Run', distance: '3 mi' }, { day: 'Saturday', type: 'Long Run', distance: '4 mi' }] },
-  { week: 2, runs: [{ day: 'Monday', type: 'Easy Run', distance: '3 mi' }, { day: 'Wednesday', type: 'Tempo', distance: '4 mi' }, { day: 'Saturday', type: 'Long Run', distance: '5 mi' }] },
-  { week: 3, runs: [{ day: 'Monday', type: 'Easy Run', distance: '4 mi' }, { day: 'Wednesday', type: 'Tempo', distance: '4 mi' }, { day: 'Saturday', type: 'Long Run', distance: '6 mi' }] },
-  { week: 4, runs: [{ day: 'Monday', type: 'Easy Run', distance: '3 mi' }, { day: 'Wednesday', type: 'Easy Run', distance: '3 mi' }, { day: 'Saturday', type: 'Long Run', distance: '5 mi' }] },
-  { week: 5, runs: [{ day: 'Monday', type: 'Easy Run', distance: '4 mi' }, { day: 'Wednesday', type: 'Tempo', distance: '5 mi' }, { day: 'Saturday', type: 'Long Run', distance: '7 mi' }] },
-  { week: 6, runs: [{ day: 'Monday', type: 'Easy Run', distance: '4 mi' }, { day: 'Wednesday', type: 'Tempo', distance: '5 mi' }, { day: 'Saturday', type: 'Long Run', distance: '8 mi' }] },
+  { week: 1, runs: [{ day: 'Monday', type: 'Easy Run', distance: '4 mi' }, { day: 'Wednesday', type: 'Tempo', distance: '5 mi' }, { day: 'Saturday', type: 'Long Run', distance: '6 mi' }] },
+  { week: 2, runs: [{ day: 'Monday', type: 'Easy Run', distance: '5 mi' }, { day: 'Wednesday', type: 'Tempo', distance: '6 mi' }, { day: 'Saturday', type: 'Long Run', distance: '7 mi' }] },
+  { week: 3, runs: [{ day: 'Monday', type: 'Easy Run', distance: '5 mi' }, { day: 'Wednesday', type: 'Tempo', distance: '7 mi' }, { day: 'Saturday', type: 'Long Run', distance: '9 mi' }] },
+  { week: 4, runs: [{ day: 'Monday', type: 'Easy Run', distance: '5 mi' }, { day: 'Wednesday', type: 'Tempo', distance: '7 mi' }, { day: 'Saturday', type: 'Long Run', distance: '10 mi' }] },
+  { week: 5, runs: [{ day: 'Monday', type: 'Easy Run', distance: '5 mi' }, { day: 'Wednesday', type: 'Tempo', distance: '7 mi' }, { day: 'Saturday', type: 'Long Run', distance: '10 mi' }] },
+  { week: 6, runs: [{ day: 'Monday', type: 'Easy Run', distance: '5 mi' }, { day: 'Wednesday', type: 'Tempo', distance: '8 mi' }, { day: 'Saturday', type: 'Long Run', distance: '10 mi' }] },
+  { week: 7, runs: [{ day: 'Monday', type: 'Easy Run', distance: '5 mi' }, { day: 'Wednesday', type: 'Tempo', distance: '8 mi' }, { day: 'Saturday', type: 'Long Run', distance: '11 mi' }] },
+  { week: 8, runs: [{ day: 'Monday', type: 'Easy Run', distance: '4 mi' }, { day: 'Wednesday', type: 'Easy Run', distance: '5 mi' }, { day: 'Saturday', type: 'Long Run', distance: '9 mi' }] },
+  { week: 9, runs: [{ day: 'Monday', type: 'Easy Run', distance: '5 mi' }, { day: 'Wednesday', type: 'Tempo', distance: '8 mi' }, { day: 'Saturday', type: 'Long Run', distance: '11 mi' }] },
+  { week: 10, runs: [{ day: 'Monday', type: 'Easy Run', distance: '5 mi' }, { day: 'Wednesday', type: 'Tempo', distance: '8 mi' }, { day: 'Saturday', type: 'Long Run', distance: '12 mi' }] },
+  { week: 11, runs: [{ day: 'Monday', type: 'Easy Run', distance: '4 mi' }, { day: 'Wednesday', type: 'Easy Run', distance: '4 mi' }, { day: 'Saturday', type: 'Long Run', distance: '8 mi' }] },
+  { week: 12, runs: [{ day: 'Monday', type: 'Easy Run', distance: '3 mi' }, { day: 'Wednesday', type: 'Easy Run', distance: '2 mi' }, { day: 'Sunday', type: 'RACE DAY 🏁', distance: '13.1 mi' }] },
 ];
 
 function TrainingPlan() {
@@ -23,7 +29,7 @@ function TrainingPlan() {
 
   return (
     <div className="training-plan">
-      <h1>6-Week Half Marathon Training Plan</h1>
+      <h1>12-Week Half Marathon Training Plan</h1>
 
       <div className="week-selector">
         {trainingPlan.map(w => (
