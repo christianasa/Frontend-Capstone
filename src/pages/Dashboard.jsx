@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../pages/';
+import './';
 
 const API = 'http://localhost:3000';
 
