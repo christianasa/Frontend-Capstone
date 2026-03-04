@@ -1,7 +1,8 @@
 .dashboard {
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px;
 }
 
 .dashboard h1 { font-size: 28px; margin-bottom: 24px; color: #1a1a1a; }
@@ -16,21 +17,21 @@
 
 .stat-card {
   background: white;
-  border: 1.5px solid #e0e0e0;
+  border: 1.5px solid #e0d0e8;
   border-radius: 10px;
   padding: 24px;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(123,63,160,0.08);
 }
 
-.stat-card h2 { font-size: 28px; color: #e05c2a; margin-bottom: 6px; }
+.stat-card h2 { font-size: 28px; color: #C84B9E; margin-bottom: 6px; }
 .stat-card p { color: #666; font-size: 13px; }
 
 .chart-section {
   background: white;
   border-radius: 10px;
   padding: 28px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 8px rgba(123,63,160,0.1);
   margin-bottom: 40px;
 }
 
@@ -42,18 +43,14 @@
   padding-top: 20px;
 }
 
-.bar-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-}
-
+.bar-group { display: flex; flex-direction: column; align-items: center; flex: 1; }
 .bar-label { font-size: 11px; color: #666; margin-bottom: 4px; }
 
 .bar {
   width: 100%;
-  background: #e05c2a;
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(to top, #C84B9E, #7B3FA0);
   border-radius: 4px 4px 0 0;
   min-height: 4px;
   transition: height 0.3s ease;
@@ -65,13 +62,15 @@
   background: white;
   border-radius: 10px;
   padding: 28px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 8px rgba(123,63,160,0.1);
 }
 
-.runs-table { width: 100%; border-collapse: collapse; }
+.runs-table { width: 100%;
+  max-width: 900px;
+  margin: 0 auto; border-collapse: collapse; }
 
 .runs-table th {
-  background: #e05c2a;
+  background: linear-gradient(135deg, #C84B9E, #7B3FA0);
   color: white;
   padding: 12px 16px;
   text-align: left;
@@ -80,7 +79,7 @@
 
 .runs-table td {
   padding: 12px 16px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0e8f8;
   font-size: 14px;
   color: #333;
 }
