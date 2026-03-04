@@ -1,9 +1,10 @@
 .navbar {
-  background-color: #e05c2a;
+  background: linear-gradient(135deg, #C84B9E, #7B3FA0);
   padding: 16px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 8px rgba(123,63,160,0.3);
 }
 
 .navbar-logo {
