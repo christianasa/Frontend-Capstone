@@ -1,5 +1,7 @@
 .training-plan {
   width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
   padding: 40px;
 }
 
@@ -31,6 +33,8 @@
 
 .schedule-table {
   width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
   border-collapse: collapse;
   background: white;
   border-radius: 10px;
