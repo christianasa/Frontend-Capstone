@@ -5,7 +5,7 @@ import './Home.css';
 function Home() {
   const navigate = useNavigate();
 
-  const raceDate = new Date('2026-06-01');
+  const raceDate = new Date('2026-04-19');
   const today = new Date();
   const daysUntilRace = Math.ceil((raceDate - today) / (1000 * 60 * 60 * 24));
 
