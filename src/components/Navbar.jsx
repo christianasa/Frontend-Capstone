@@ -5,7 +5,7 @@ import './Navbar.css';
 function Navbar() {
   return (
     <nav className="navbar">
-      <div className="navbar-logo">RunTrack 🏃</div>
+      <div className="navbar-logo">🏃🏾‍♀️‍➡️ RunTrack 🏃🏾‍♀️</div>
       <div className="navbar-links">
         <Link to="/">Home</Link>
         <Link to="/training-plan">Training Plan</Link>

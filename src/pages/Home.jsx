@@ -12,7 +12,7 @@ function Home() {
   return (
     <div className="home">
       <div className="hero">
-        <h1>Welcome to RunTrack 🏃</h1>
+        <h1>Welcome to RunTrack 🏃🏾‍♀️</h1>
         <p>Your personal half marathon training companion.</p>
         <div className="countdown">
           <span className="countdown-number">{daysUntilRace}</span>
