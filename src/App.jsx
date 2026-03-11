@@ -1,24 +1,27 @@
-import { useState } from 'react';
-import Login from './pages/Login';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import TrainingPlan from './pages/TrainingPlan';
+import LogRun from './pages/LogRun';
 import Dashboard from './pages/Dashboard';
 
+import './App.css';
+
 function App() {
-  const [token, setToken] = useState(() => localStorage.getItem('token'));
-
-  const handleLoginSuccess = (newToken) => {
-    setToken(newToken);
-  };
-
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    setToken(null);
-  };
-
-  if (!token) {
-    return <Login onLoginSuccess={handleLoginSuccess} />;
-  }
-
-  return <Dashboard onLogout={handleLogout} />;
+  return (
+    <Router>
+      <Navbar />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/training-plan" element={<TrainingPlan />} />
+          <Route path="/log-run" element={<LogRun />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
