@@ -4,20 +4,25 @@ import './Dashboard.css';
 
 const API = 'http://localhost:3000';
 
-function Dashboard() {
+function Dashboard({ onLogout }) {
   const [runs, setRuns] = useState([]);
 
   useEffect(() => {
     const fetchRuns = async () => {
       try {
-        const res = await axios.get(`${API}/runs`);
+        const token = localStorage.getItem('token');
+        const res = await axios.get(`${API}/runs`, {
+          headers: { Authorization: `Bearer ${token}` },
+        });
         setRuns(res.data);
       } catch (err) {
-        console.error('Failed to fetch runs', err);
+        // If 401, token is invalid — log out
+        if (err.response?.status === 401) onLogout();
+        else console.error('Failed to fetch runs', err);
       }
     };
     fetchRuns();
-  }, []);
+  }, [onLogout]);
 
   const totalMiles = runs.reduce((sum, r) => sum + parseFloat(r.distance_miles || 0), 0).toFixed(1);
   const totalRuns = runs.length;
@@ -42,7 +47,10 @@ function Dashboard() {
 
   return (
     <div className="dashboard">
-      <h1>Progress Dashboard</h1>
+      <div className="dashboard-header">
+        <h1>Progress Dashboard</h1>
+        <button className="logout-btn" onClick={onLogout}>Sign Out</button>
+      </div>
 
       <div className="stats-grid">
         <div className="stat-card">
