@@ -2,6 +2,7 @@
 
 A full-stack half marathon training app built with React, React Native, Node.js, Express, and MongoDB. RunTrack helps users follow a personalized 6-week training plan, log their runs, and track their progress toward race day.
 
+## Backend link: https://github.com/christianasa/Capstone-Backend
 ---
 
 ## Table of Contents
