@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Page ───────────────────────────────────────────── */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  background: #faf7fc;
+  font-family: 'DM Sans', sans-serif;
+  overflow: hidden;
+}
+
+/* ── Left decorative panel ──────────────────────────── */
+.login-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 52px 56px;
+  background: linear-gradient(145deg, #C84B9E 0%, #7B3FA0 60%, #4a2070 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-left::before,
+.login-left::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+}
+.login-left::before { width: 420px; height: 420px; bottom: -120px; right: -100px; }
+.login-left::after  { width: 240px; height: 240px; top: -60px; left: -60px; }
+
+.brand { display: flex; align-items: center; gap: 10px; position: relative; z-index: 1; }
+.brand-icon { font-size: 26px; color: rgba(255,255,255,0.9); }
+.brand-name { font-family: 'DM Serif Display', serif; font-size: 22px; color: #fff; letter-spacing: 0.02em; }
+
+.tagline { position: relative; z-index: 1; }
+.tagline h2 { font-family: 'DM Serif Display', serif; font-size: clamp(32px, 3.5vw, 50px); font-weight: 400; color: #fff; line-height: 1.15; margin-bottom: 14px; }
+.tagline p  { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.65); letter-spacing: 0.02em; }
+
+.stat-preview { display: flex; align-items: center; gap: 28px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.18); position: relative; z-index: 1; }
+.preview-stat { display: flex; flex-direction: column; gap: 4px; }
+.preview-num   { font-family: 'DM Serif Display', serif; font-size: 38px; color: #fff; line-height: 1; }
+.preview-label { font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; }
+.preview-divider { width: 1px; height: 44px; background: rgba(255,255,255,0.2); }
+
+/* ── Right panel ─────────────────────────────────────── */
+.login-right { width: 460px; display: flex; align-items: center; justify-content: center; padding: 48px 44px; }
+
+.login-card { width: 100%; animation: fadeUp 0.45s ease both; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+.card-title    { font-family: 'DM Serif Display', serif; font-size: 34px; font-weight: 400; color: #1a1a1a; margin-bottom: 6px; }
+.card-subtitle { font-size: 14px; color: #888; margin-bottom: 30px; }
+
+/* ── Mode toggle ─────────────────────────────────────── */
+.mode-toggle { display: flex; background: #f0e8f8; border-radius: 8px; padding: 4px; gap: 4px; margin-bottom: 28px; }
+.toggle-btn { flex: 1; padding: 9px; border: none; border-radius: 5px; background: transparent; color: #999; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
+.toggle-btn.active { background: linear-gradient(135deg, #C84B9E, #7B3FA0); color: #fff; box-shadow: 0 2px 8px rgba(123,63,160,0.3); }
+
+/* ── Form ────────────────────────────────────────────── */
+.login-form { display: flex; flex-direction: column; gap: 16px; }
+.form-group  { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7B3FA0; }
+
+.form-group input {
+  background: #fff;
+  border: 1.5px solid #e0d0e8;
+  border-radius: 8px;
+  padding: 12px 15px;
+  color: #1a1a1a;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-group input::placeholder { color: #c4b0d4; }
+.form-group input:focus { border-color: #C84B9E; box-shadow: 0 0 0 3px rgba(200,75,158,0.1); }
+
+.form-error { background: #fff0f3; border: 1.5px solid #fca5a5; border-radius: 7px; padding: 10px 14px; font-size: 13px; color: #dc2626; }
+
+.submit-btn {
+  margin-top: 4px; padding: 14px;
+  background: linear-gradient(135deg, #C84B9E, #7B3FA0);
+  border: none; border-radius: 8px; color: #fff;
+  font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600;
+  cursor: pointer; transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(123,63,160,0.35);
+}
+.submit-btn:hover:not(:disabled) { opacity: 0.92; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(123,63,160,0.4); }
+.submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.btn-loading { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.spinner { width: 14px; height: 14px; border: 2px solid rgba(255,255,255,0.35); border-top-color: #fff; border-radius: 50%; animation: rotate 0.7s linear infinite; display: inline-block; }
+@keyframes rotate { to { transform: rotate(360deg); } }
+
+/* ── Switch link ─────────────────────────────────────── */
+.switch-mode { text-align: center; margin-top: 20px; font-size: 13px; color: #aaa; }
+.switch-link { background: none; border: none; color: #C84B9E; cursor: pointer; font-size: 13px; font-family: 'DM Sans', sans-serif; font-weight: 500; padding: 0; text-decoration: underline; text-underline-offset: 3px; }
+
+/* ── Also add logout btn styles for Dashboard ──────── */
+.dashboard-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.dashboard-header h1 { margin-bottom: 0; }
+.logout-btn {
+  padding: 8px 18px;
+  background: transparent;
+  border: 1.5px solid #e0d0e8;
+  border-radius: 7px;
+  color: #7B3FA0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.logout-btn:hover { background: #f0e8f8; border-color: #C84B9E; }
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 800px) {
+  .login-page { flex-direction: column; }
+  .login-left { padding: 36px 28px 32px; }
+  .login-right { width: 100%; padding: 36px 24px; }
+}
